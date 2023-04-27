@@ -43,52 +43,52 @@ export default class CharityCasesAdd extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      // cases_list: [
-      //   {
-      //     user_image: require('../Images/man.png'),
-      //     user_name: 'محمد احمد',
-      //     user_show: 1,
-      //     user_id: 1,
-      //   },
-      //   {
-      //     user_image: require('../Images/woman.png'),
-      //     user_name: 'فوزيه محمد',
-      //     user_show: 1,
-      //     user_id: 2,
-      //   },
-      //   {
-      //     user_image: require('../Images/woman.png'),
-      //     user_name: 'منار محمد',
-      //     user_show: 1,
-      //     user_id: 3,
-      //   },
-      //   {
-      //     user_image: require('../Images/woman.png'),
-      //     user_name: 'فوزيه محمد',
-      //     user_show: 1,
-      //     user_id: 1,
-      //   },
-      //   {
-      //     user_image: require('../Images/man.png'),
-      //     user_name: 'محمد احمد',
-      //     user_show: 1,
-      //     user_id: 2,
-      //   },
-      //   {
-      //     user_image: require('../Images/woman.png'),
-      //     user_name: 'فوزيه محمد',
-      //     user_show: 1,
-      //     user_id: 1,
-      //   },
-      //   {
-      //     user_image: require('../Images/woman.png'),
-      //     user_name: 'منار محمد',
-      //     user_show: 1,
-      //     user_id: 2,
-      //   },
-      // ],
+      cases_list: [
+        {
+          user_image: require('../Images/man.png'),
+          user_name: 'محمد احمد',
+          user_show: 1,
+          user_id: 1,
+        },
+        {
+          user_image: require('../Images/woman.png'),
+          user_name: 'فوزيه محمد',
+          user_show: 1,
+          user_id: 2,
+        },
+        {
+          user_image: require('../Images/woman.png'),
+          user_name: 'منار محمد',
+          user_show: 1,
+          user_id: 3,
+        },
+        {
+          user_image: require('../Images/woman.png'),
+          user_name: 'فوزيه محمد',
+          user_show: 1,
+          user_id: 1,
+        },
+        {
+          user_image: require('../Images/man.png'),
+          user_name: 'محمد احمد',
+          user_show: 1,
+          user_id: 2,
+        },
+        {
+          user_image: require('../Images/woman.png'),
+          user_name: 'فوزيه محمد',
+          user_show: 1,
+          user_id: 1,
+        },
+        {
+          user_image: require('../Images/woman.png'),
+          user_name: 'منار محمد',
+          user_show: 1,
+          user_id: 2,
+        },
+      ],
 
-      casesList: this.props.route.params.casesList,
+      // casesList: this.props.route.params.casesList,
 
       numOfItems: 0,
       found: true,
@@ -103,44 +103,44 @@ export default class CharityCasesAdd extends React.Component {
 
   // Functions
   searchfun(value) {
-    // let newarr = this.state.casesList;
-    // let counter = 0;
-    // let found = false;
-    // for (let i = 0; i < newarr.length; i++) {
-    //   if (newarr[i].case_name.includes(value.toUpperCase().trim())) {
-    //     newarr[i].case_show = 1;
-    //     found = true;
-    //   } else {
-    //     newarr[i].case_show = 0;
-
-    //     // counter++;
-    //   }
-
-    //   this.setState({ cases_list: newarr, numOfItems: counter, found: found });
-    // }
-
     let newarr = this.state.casesList;
-    let casesOfEachCat = newarr.category_cases;
     let counter = 0;
     let found = false;
     for (let i = 0; i < newarr.length; i++) {
-      for (let j = 0; j < casesOfEachCat.length; j++) {
-        if (casesOfEachCat[j].case_name.includes(value.toUpperCase().trim())) {
-          casesOfEachCat[j].case_show = 1;
-          found = true;
-        } else {
-          casesOfEachCat[j].case_show = 0;
-          // counter++;
-        }
+      if (newarr[i].user_name.includes(value.toUpperCase().trim())) {
+        newarr[i].user_show = 1;
+        found = true;
+      } else {
+        newarr[i].user_show = 0;
 
-        this.setState({casesList: newarr, numOfItems: counter, found: found});
+        // counter++;
       }
+
+      this.setState({cases_list: newarr, numOfItems: counter, found: found});
     }
+
+    // let newarr = this.state.casesList;
+    // let casesOfEachCat = newarr.category_cases;
+    // let counter = 0;
+    // let found = false;
+    // for (let i = 0; i < newarr.length; i++) {
+    //   for (let j = 0; j < casesOfEachCat.length; j++) {
+    //     if (casesOfEachCat[j].user_name.includes(value.toUpperCase().trim())) {
+    //       casesOfEachCat[j].user_show = 1;
+    //       found = true;
+    //     } else {
+    //       casesOfEachCat[j].user_show = 0;
+    //       // counter++;
+    //     }
+
+    //     this.setState({casesList: newarr, numOfItems: counter, found: found});
+    //   }
+    // }
   }
 
   DeleteCase(index) {
-    this.state.casesList.category_cases.splice(index, 1);
-    this.setState({casesList: this.state.casesList});
+    this.state.cases_list.splice(index, 1);
+    this.setState({cases_list: this.state.cases_list});
   }
   render() {
     return (
@@ -207,14 +207,14 @@ export default class CharityCasesAdd extends React.Component {
               flex: 1,
               backgroundColor: bigBackground,
             }}>
-            {this.state.casesList.length != 0 ? (
+            {this.state.cases_list.length != 0 ? (
               <>
                 <ScrollView>
                   <View>
-                    {this.state.casesList.map((item, index) =>
+                    {this.state.cases_list.map((item, index) =>
                       // key = {index};
-                      // item.category_cases.map((case_item, case_index) =>
-                      item.case_show == 1 ? (
+                      // item.category_cases.map((user_item, user_index) =>
+                      item.user_show == 1 ? (
                         <View
                           key={index}
                           style={{
@@ -243,7 +243,7 @@ export default class CharityCasesAdd extends React.Component {
                               // }}
                             >
                               <Image
-                                source={item.case_img}
+                                source={item.user_image}
                                 style={{
                                   width: '28%',
                                   height: '75%',
@@ -269,7 +269,7 @@ export default class CharityCasesAdd extends React.Component {
                                     color: '#000',
                                     textAlign: 'left',
                                   }}>
-                                  {item.case_name}
+                                  {item.user_name}
                                 </Text>
 
                                 <Text
@@ -279,13 +279,13 @@ export default class CharityCasesAdd extends React.Component {
                                     color: '#000',
                                     textAlign: 'left',
                                   }}>
-                                  {item.case_name}
+                                  {item.user_name}
                                 </Text>
                               </View>
                             </TouchableOpacity>
                             <TouchableOpacity
                               onPress={() => {
-                                this.DeleteCase(case_index);
+                                this.DeleteCase(index);
                               }}
                               style={{
                                 // backgroundColor: '#00f',
@@ -317,7 +317,7 @@ export default class CharityCasesAdd extends React.Component {
                   style={styles.addCaseBtn}
                   onPress={() => {
                     this.props.navigation.navigate('AddFullCases', {
-                      categoryCases: this.state.casesList,
+                      categoryCases: this.state.cases_list,
                     });
                   }}>
                   <Text
@@ -349,7 +349,7 @@ export default class CharityCasesAdd extends React.Component {
                 <TouchableOpacity
                   style={styles.addCaseBtn}
                   onPress={() => {
-                    this.props.navigation.navigate('EntryCaseDetails');
+                    this.props.navigation.navigate('AddFullCases');
                   }}>
                   <Text
                     style={{
