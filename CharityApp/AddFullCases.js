@@ -172,7 +172,11 @@ export default class AddFullCases extends React.Component {
                 borderColor={footerIcons}
                 // active border height
                 borderHeight={3}
-                inputPadding={16}
+                inputPadding={30}
+                inputStyle={{
+                  textAlign: 'right',
+                  fontSize: 20,
+                }}
               />
             </View>
 
@@ -204,10 +208,10 @@ export default class AddFullCases extends React.Component {
                 borderColor={footerIcons}
                 // active border height
                 borderHeight={3}
-                inputPadding={16}
+                inputPadding={30}
                 inputStyle={{
                   textAlign: 'right',
-                  paddingRight: width * 0.05,
+                  fontSize: 20,
                 }}
               />
             </View>
@@ -240,10 +244,10 @@ export default class AddFullCases extends React.Component {
                 borderColor={footerIcons}
                 // active border height
                 borderHeight={3}
-                inputPadding={16}
+                inputPadding={30}
                 inputStyle={{
                   textAlign: 'right',
-                  paddingRight: width * 0.05,
+                  fontSize: 20,
                 }}
               />
             </View>
@@ -277,7 +281,11 @@ export default class AddFullCases extends React.Component {
                 borderColor={footerIcons}
                 // active border height
                 borderHeight={3}
-                inputPadding={16}
+                inputPadding={30}
+                inputStyle={{
+                  textAlign: 'right',
+                  fontSize: 20,
+                }}
               />
             </View>
 
@@ -309,7 +317,11 @@ export default class AddFullCases extends React.Component {
                 borderColor={footerIcons}
                 // active border height
                 borderHeight={3}
-                inputPadding={16}
+                inputPadding={30}
+                inputStyle={{
+                  textAlign: 'right',
+                  fontSize: 20,
+                }}
               />
             </View>
 
