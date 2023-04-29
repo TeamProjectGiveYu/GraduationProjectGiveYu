@@ -33,27 +33,27 @@ export default class AddFullCases extends React.Component {
     this.state = {
       // Case Name
       case_name: '',
-      case_name_err: '',
+      case_name_error: '',
 
       // Case Identification Number
       case_identfication: '',
-      case_identfication_err: '',
+      case_identfication_error: '',
 
       // Case Age
       case_age: '',
-      case_age_err: '',
+      case_age_error: '',
 
       // Case Description
       case_category: '',
-      case_category_err: '',
+      case_category_error: '',
 
       // Case requirment
       case_needs: '',
-      case_needs_err: '',
+      case_needs_error: '',
 
       // Case explaination
       case_explaination: '',
-      case_explaination_err: '',
+      case_explaination_error: '',
 
       categoryCases: this.props.route.params.categoryCases,
     };
@@ -65,51 +65,51 @@ export default class AddFullCases extends React.Component {
 
     // Case Name Conditions
     if (this.state.case_name.trim() == '') {
-      this.setState({case_name_err: 'الرجاء إدخال إسم الحالة'});
+      this.setState({case_name_error: 'الرجاء إدخال إسم الحالة'});
       errors++;
     } else {
-      this.setState({case_name_err: ''});
+      this.setState({case_name_error: ''});
     }
 
     // Case Identification Number Conditions
     if (this.state.case_identfication.trim() == '') {
       this.setState({
-        case_identfication_err: 'الرجاء إدخال الرقم التعريفي للحالة',
+        case_identfication_error: 'الرجاء إدخال الرقم التعريفي للحالة',
       });
       errors++;
     } else {
-      this.setState({case_identfication_err: ''});
+      this.setState({case_identfication_error: ''});
     }
 
     // Case Age Conditions
     if (this.state.case_age.trim() == '') {
-      this.setState({case_age_err: 'الرجاء إدخال عمر الحالة'});
+      this.setState({case_age_error: 'الرجاء إدخال عمر الحالة'});
       errors++;
     } else {
-      this.setState({case_age_err: ''});
+      this.setState({case_age_error: ''});
     }
 
     // Case Description Conditions
     if (this.state.case_category.trim() == '') {
-      this.setState({case_category_err: 'الرجاء إدخال شرح لوضع الحالة'});
+      this.setState({case_category_error: 'الرجاء إدخال شرح لوضع الحالة'});
       errors++;
     } else {
-      this.setState({case_category_err: ''});
+      this.setState({case_category_error: ''});
     }
 
     // Case requirment Conditions
     if (this.state.case_needs.trim() == '') {
-      this.setState({case_needs_err: 'الرجاء إدخال متطلبات الحالة'});
+      this.setState({case_needs_error: 'الرجاء إدخال متطلبات الحالة'});
       errors++;
     } else {
-      this.setState({case_needs_err: ''});
+      this.setState({case_needs_error: ''});
     }
     // Case requirment Conditions
     if (this.state.case_explaination.trim() == '') {
-      this.setState({case_explaination_err: 'الرجاء إدخال متطلبات الحالة'});
+      this.setState({case_explaination_error: 'الرجاء إدخال متطلبات الحالة'});
       errors++;
     } else {
-      this.setState({case_explaination_err: ''});
+      this.setState({case_explaination_error: ''});
     }
 
     // Correct Entered Data Condition
@@ -207,7 +207,7 @@ export default class AddFullCases extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_name_err}
+              {this.state.case_name_error}
             </Text>
 
             {/* Case Identification Number  */}
@@ -243,7 +243,7 @@ export default class AddFullCases extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_identfication_err}
+              {this.state.case_identfication_error}
             </Text>
 
             {/* Case Age  */}
@@ -279,7 +279,7 @@ export default class AddFullCases extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_age_err}
+              {this.state.case_age_error}
             </Text>
 
             {/* Case Description  */}
@@ -316,7 +316,7 @@ export default class AddFullCases extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_explaination_err}
+              {this.state.case_explaination_error}
             </Text>
 
             {/* Case Description  */}
@@ -353,7 +353,7 @@ export default class AddFullCases extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_category_err}
+              {this.state.case_category_error}
             </Text>
 
             {/* Case Requirment  */}
@@ -389,7 +389,7 @@ export default class AddFullCases extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_needs_err}
+              {this.state.case_needs_error}
             </Text>
           </ScrollView>
 

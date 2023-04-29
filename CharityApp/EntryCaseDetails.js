@@ -34,23 +34,23 @@ export default class EntryCaseDetails extends React.Component {
     this.state = {
       // Case Name
       case_name: '',
-      case_name_err: '',
+      case_name_error: '',
 
       // Case Identification Number
       case_id_num: '',
-      case_id_num_err: '',
+      case_id_num_error: '',
 
       // Case Age
       case_age: '',
-      case_age_err: '',
+      case_age_error: '',
 
       // Case Description
       case_descrip: '',
-      case_descrip_err: '',
+      case_descrip_error: '',
 
       // Case requirment
       case_requirment: '',
-      case_requirment_err: '',
+      case_requirment_error: '',
 
       categoryCases: this.props.route.params.categoryCases,
     };
@@ -62,42 +62,42 @@ export default class EntryCaseDetails extends React.Component {
 
     // Case Name Conditions
     if (this.state.case_name.trim() == '') {
-      this.setState({case_name_err: 'الرجاء إدخال إسم الحالة'});
+      this.setState({case_name_error: 'الرجاء إدخال إسم الحالة'});
       errors++;
     } else {
-      this.setState({case_name_err: ''});
+      this.setState({case_name_error: ''});
     }
 
     // Case Identification Number Conditions
     if (this.state.case_id_num.trim() == '') {
-      this.setState({case_id_num_err: 'الرجاء إدخال الرقم التعريفي للحالة'});
+      this.setState({case_id_num_error: 'الرجاء إدخال الرقم التعريفي للحالة'});
       errors++;
     } else {
-      this.setState({case_id_num_err: ''});
+      this.setState({case_id_num_error: ''});
     }
 
     // Case Age Conditions
     if (this.state.case_age.trim() == '') {
-      this.setState({case_age_err: 'الرجاء إدخال عمر الحالة'});
+      this.setState({case_age_error: 'الرجاء إدخال عمر الحالة'});
       errors++;
     } else {
-      this.setState({case_age_err: ''});
+      this.setState({case_age_error: ''});
     }
 
     // Case Description Conditions
     if (this.state.case_descrip.trim() == '') {
-      this.setState({case_descrip_err: 'الرجاء إدخال شرح لوضع الحالة'});
+      this.setState({case_descrip_error: 'الرجاء إدخال شرح لوضع الحالة'});
       errors++;
     } else {
-      this.setState({case_descrip_err: ''});
+      this.setState({case_descrip_error: ''});
     }
 
     // Case requirment Conditions
     if (this.state.case_requirment.trim() == '') {
-      this.setState({case_requirment_err: 'الرجاء إدخال متطلبات الحالة'});
+      this.setState({case_requirment_error: 'الرجاء إدخال متطلبات الحالة'});
       errors++;
     } else {
-      this.setState({case_requirment_err: ''});
+      this.setState({case_requirment_error: ''});
     }
 
     // Correct Entered Data Condition
@@ -182,7 +182,7 @@ export default class EntryCaseDetails extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_name_err}
+              {this.state.case_name_error}
             </Text>
 
             {/* Case Identification Number  */}
@@ -218,7 +218,7 @@ export default class EntryCaseDetails extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_id_num_err}
+              {this.state.case_id_num_error}
             </Text>
 
             {/* Case Age  */}
@@ -254,7 +254,7 @@ export default class EntryCaseDetails extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_age_err}
+              {this.state.case_age_error}
             </Text>
 
             {/* Case Description  */}
@@ -291,7 +291,7 @@ export default class EntryCaseDetails extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_descrip_err}
+              {this.state.case_descrip_error}
             </Text>
 
             {/* Case Requirment  */}
@@ -327,7 +327,7 @@ export default class EntryCaseDetails extends React.Component {
                 textAlign: 'center',
                 // marginBottom: height * 0.01,
               }}>
-              {this.state.case_requirment_err}
+              {this.state.case_requirment_error}
             </Text>
           </ScrollView>
 
