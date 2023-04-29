@@ -125,10 +125,12 @@ export default class CasesOfCategory extends React.Component {
                       <TouchableOpacity
                         key={index}
                         style={styles.containerOfEachCase}
-                        // onPress={() => {
-                        //   this.props.navigation.navigate('');
-                        // }}
-                      >
+                        onPress={() => {
+                          this.props.navigation.navigate(
+                            'CategoryCasedetails',
+                            {categoryCase: item},
+                          );
+                        }}>
                         {/* Case Image  */}
                         <Image
                           source={item.case_img}

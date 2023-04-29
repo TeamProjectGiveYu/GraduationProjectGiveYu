@@ -45,46 +45,38 @@ export default class CharityCasesAdd extends React.Component {
     this.state = {
       cases_list: [
         {
-          user_image: require('../Images/man.png'),
-          user_name: 'محمد احمد',
-          user_show: 1,
-          user_id: 1,
+          case_image: require('../Images/man.png'),
+          case_name: 'محمد احمد',
+          case_show: 1,
+          case_id: 1,
+          case_category: 'مبلغ نقدي',
+          case_age: '55',
+          case_needs: '5000 جنيه',
+          case_explaination:
+            ' حاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجلهحاله عاجله',
+          case_identfication: '221',
         },
         {
-          user_image: require('../Images/woman.png'),
-          user_name: 'فوزيه محمد',
-          user_show: 1,
-          user_id: 2,
+          case_image: require('../Images/woman.png'),
+          case_name: 'فوزيه محمد',
+          case_show: 1,
+          case_id: 2,
+          case_category: 'الملابس',
+          case_age: '60',
+          case_needs: 'ملابس شتويه',
+          case_explaination: 'حاله عاجله',
+          case_identfication: '550',
         },
         {
-          user_image: require('../Images/woman.png'),
-          user_name: 'منار محمد',
-          user_show: 1,
-          user_id: 3,
-        },
-        {
-          user_image: require('../Images/woman.png'),
-          user_name: 'فوزيه محمد',
-          user_show: 1,
-          user_id: 1,
-        },
-        {
-          user_image: require('../Images/man.png'),
-          user_name: 'محمد احمد',
-          user_show: 1,
-          user_id: 2,
-        },
-        {
-          user_image: require('../Images/woman.png'),
-          user_name: 'فوزيه محمد',
-          user_show: 1,
-          user_id: 1,
-        },
-        {
-          user_image: require('../Images/woman.png'),
-          user_name: 'منار محمد',
-          user_show: 1,
-          user_id: 2,
+          case_image: require('../Images/woman.png'),
+          case_name: 'منار محمد',
+          case_show: 1,
+          case_id: 3,
+          case_category: 'الدواء',
+          case_age: '55',
+          case_needs: '3 panadol extra',
+          case_explaination: 'حاله عاجله',
+          case_identfication: '370',
         },
       ],
 
@@ -103,15 +95,15 @@ export default class CharityCasesAdd extends React.Component {
 
   // Functions
   searchfun(value) {
-    let newarr = this.state.casesList;
+    let newarr = this.state.cases_list;
     let counter = 0;
     let found = false;
     for (let i = 0; i < newarr.length; i++) {
-      if (newarr[i].user_name.includes(value.toUpperCase().trim())) {
-        newarr[i].user_show = 1;
+      if (newarr[i].case_name.includes(value.toUpperCase().trim())) {
+        newarr[i].case_show = 1;
         found = true;
       } else {
-        newarr[i].user_show = 0;
+        newarr[i].case_show = 0;
 
         // counter++;
       }
@@ -125,11 +117,11 @@ export default class CharityCasesAdd extends React.Component {
     // let found = false;
     // for (let i = 0; i < newarr.length; i++) {
     //   for (let j = 0; j < casesOfEachCat.length; j++) {
-    //     if (casesOfEachCat[j].user_name.includes(value.toUpperCase().trim())) {
-    //       casesOfEachCat[j].user_show = 1;
+    //     if (casesOfEachCat[j].case_name.includes(value.toUpperCase().trim())) {
+    //       casesOfEachCat[j].case_show = 1;
     //       found = true;
     //     } else {
-    //       casesOfEachCat[j].user_show = 0;
+    //       casesOfEachCat[j].case_show = 0;
     //       // counter++;
     //     }
 
@@ -214,7 +206,7 @@ export default class CharityCasesAdd extends React.Component {
                     {this.state.cases_list.map((item, index) =>
                       // key = {index};
                       // item.category_cases.map((user_item, user_index) =>
-                      item.user_show == 1 ? (
+                      item.case_show == 1 ? (
                         <View
                           key={index}
                           style={{
@@ -238,12 +230,14 @@ export default class CharityCasesAdd extends React.Component {
                                 flexDirection: 'row',
                               }}
                               key={index}
-                              // onPress={() => {
-                              //   this.props.navigation.navigate('CharityCaseDetails')
-                              // }}
-                            >
+                              onPress={() => {
+                                this.props.navigation.navigate(
+                                  'FullCasesDetails',
+                                  {caseDetails: item},
+                                );
+                              }}>
                               <Image
-                                source={item.user_image}
+                                source={item.case_image}
                                 style={{
                                   width: '28%',
                                   height: '75%',
@@ -269,7 +263,7 @@ export default class CharityCasesAdd extends React.Component {
                                     color: '#000',
                                     textAlign: 'left',
                                   }}>
-                                  {item.user_name}
+                                  {item.case_name}
                                 </Text>
 
                                 <Text
@@ -279,7 +273,7 @@ export default class CharityCasesAdd extends React.Component {
                                     color: '#000',
                                     textAlign: 'left',
                                   }}>
-                                  {item.user_name}
+                                  {item.case_name}
                                 </Text>
                               </View>
                             </TouchableOpacity>
