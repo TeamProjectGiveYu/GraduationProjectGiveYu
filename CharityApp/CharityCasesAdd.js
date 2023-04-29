@@ -364,7 +364,7 @@ export default class CharityCasesAdd extends React.Component {
               width: '100%',
               //  backgroundColor: "#f0f",
               // flex: 1,
-              backgroundColor: '#E5ECF4',
+              backgroundColor: '#fff',
               // borderTopLeftRadius: 40,
               // borderTopRightRadius: 40,
               // marginTop: height * -0.09,
@@ -378,7 +378,7 @@ export default class CharityCasesAdd extends React.Component {
               style={{width: 300, height: 250, alignSelf: 'center'}}
             />
             <Text style={{fontSize: 20, color: '#000', fontWeight: 'bold'}}>
-              لا يوجد مؤسسات بهذا الأسم
+              لا يوجد حالات بهذا الأسم
             </Text>
           </KeyboardAvoidingView>
         )}

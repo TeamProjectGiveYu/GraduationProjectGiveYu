@@ -35,7 +35,7 @@ export default class CharityOptions extends React.Component {
           category_cases: [
             {
               case_id: 0,
-              case_img: require('../Images/man.png'),
+              case_image: require('../Images/man.png'),
               case_name: 'محمد احمد',
               case_show: 1,
               case_age: '55',
@@ -46,7 +46,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 1,
-              case_img: require('../Images/woman.png'),
+              case_image: require('../Images/woman.png'),
               case_name: 'فوزية صالح',
               case_show: 1,
               case_age: '55',
@@ -57,7 +57,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 2,
-              case_img: require('../Images/man.png'),
+              case_image: require('../Images/man.png'),
               case_name: ' عبدالرحمن محمد',
               case_show: 1,
               case_age: '55',
@@ -68,7 +68,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 3,
-              case_img: require('../Images/woman.png'),
+              case_image: require('../Images/woman.png'),
               case_name: 'نورهان عبدالله',
               case_show: 1,
               case_age: '55',
@@ -86,7 +86,7 @@ export default class CharityOptions extends React.Component {
           category_cases: [
             {
               case_id: 0,
-              case_img: require('../Images/man.png'),
+              case_image: require('../Images/man.png'),
               case_name: 'محمد احمد',
               case_show: 1,
               case_age: '60',
@@ -96,7 +96,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 1,
-              case_img: require('../Images/woman.png'),
+              case_image: require('../Images/woman.png'),
               case_name: 'فوزية صالح',
               case_show: 1,
               case_age: '60',
@@ -106,7 +106,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 2,
-              case_img: require('../Images/man.png'),
+              case_image: require('../Images/man.png'),
               case_name: ' عبدالرحمن محمد',
               case_show: 1,
               case_age: '60',
@@ -123,19 +123,19 @@ export default class CharityOptions extends React.Component {
         //   category_cases: [
         //     {
         //       case_id: 0,
-        //       case_img: require('../Images/man.png'),
+        //       case_image: require('../Images/man.png'),
         //       case_name: 'محمد احمد',
         //       case_show: 1,
         //     },
         //     {
         //       case_id: 2,
-        //       case_img: require('../Images/man.png'),
+        //       case_image: require('../Images/man.png'),
         //       case_name: ' عبدالرحمن محمد',
         //       case_show: 1,
         //     },
         //     {
         //       case_id: 1,
-        //       case_img: require('../Images/woman.png'),
+        //       case_image: require('../Images/woman.png'),
         //       case_name: 'فوزية صالح',
         //       case_show: 1,
         //     },
@@ -148,7 +148,7 @@ export default class CharityOptions extends React.Component {
           category_cases: [
             {
               case_id: 0,
-              case_img: require('../Images/woman.png'),
+              case_image: require('../Images/woman.png'),
               case_name: 'فوزية صالح',
               case_show: 1,
               case_age: '55',
@@ -158,7 +158,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 1,
-              case_img: require('../Images/woman.png'),
+              case_image: require('../Images/woman.png'),
               case_name: 'نورهان عبدالله',
               case_show: 1,
               case_age: '55',
@@ -168,7 +168,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 2,
-              case_img: require('../Images/man.png'),
+              case_image: require('../Images/man.png'),
               case_name: 'محمد احمد',
               case_show: 1,
               case_age: '55',
@@ -178,7 +178,7 @@ export default class CharityOptions extends React.Component {
             },
             {
               case_id: 3,
-              case_img: require('../Images/man.png'),
+              case_image: require('../Images/man.png'),
               case_name: ' عبدالرحمن محمد',
               case_show: 1,
               case_age: '55',
@@ -195,13 +195,13 @@ export default class CharityOptions extends React.Component {
         //   category_cases: [
         //     {
         //       case_id: 0,
-        //       case_img: require('../Images/man.png'),
+        //       case_image: require('../Images/man.png'),
         //       case_name: 'محمد احمد',
         //       case_show: 1,
         //     },
         //     {
         //       case_id: 1,
-        //       case_img: require('../Images/woman.png'),
+        //       case_image: require('../Images/woman.png'),
         //       case_name: 'فوزية صالح',
         //       case_show: 1,
         //     },
@@ -214,7 +214,7 @@ export default class CharityOptions extends React.Component {
         //   category_cases: [
         //     {
         //       case_id: 0,
-        //       case_img: require('../Images/woman.png'),
+        //       case_image: require('../Images/woman.png'),
         //       case_name: 'نورهان عبدالله',
         //       case_show: 1,
         //     },

@@ -106,7 +106,7 @@ export default class EntryCaseDetails extends React.Component {
       let casesList = this.state.categoryCases;
       casesList.push({
         case_id: 0,
-        case_img: require('../Images/man.png'),
+        case_image: require('../Images/man.png'),
         case_name: this.state.case_name,
         case_show: 1,
       });

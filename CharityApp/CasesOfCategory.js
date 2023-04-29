@@ -24,6 +24,7 @@ import {RFValue} from 'react-native-responsive-fontsize';
 import FontAwesome5 from 'react-native-vector-icons/FontAwesome5';
 const width = Dimensions.get('screen').width;
 const height = Dimensions.get('screen').height;
+import Icon from 'react-native-vector-icons/FontAwesome5';
 
 export default class CasesOfCategory extends React.Component {
   constructor(props) {
@@ -38,22 +39,22 @@ export default class CasesOfCategory extends React.Component {
       //   {
       //     case_id: 0,
       //     case_name: 'محمد احمد',
-      //     case_img: require('../Images/man.png'),
+      //     case_image: require('../Images/man.png'),
       //   },
       //   {
       //     case_id: 0,
       //     case_name: 'فوزية صالح',
-      //     case_img: require('../Images/woman.png'),
+      //     case_image: require('../Images/woman.png'),
       //   },
       //   {
       //     case_id: 0,
       //     case_name: 'عبدالرحمن محمد',
-      //     case_img: require('../Images/man.png'),
+      //     case_image: require('../Images/man.png'),
       //   },
       //   {
       //     case_id: 0,
       //     case_name: 'نورهان عبدالله',
-      //     case_img: require('../Images/woman.png'),
+      //     case_image: require('../Images/woman.png'),
       //   },
       // ],
     };
@@ -122,42 +123,137 @@ export default class CasesOfCategory extends React.Component {
                 <View style={styles.mapItemsContainer}>
                   {this.state.categoryDetails.category_cases.map(
                     (item, index) => (
-                      <TouchableOpacity
+                      // <TouchableOpacity
+                      //   key={index}
+                      //   style={styles.containerOfEachCase}
+                      // onPress={() => {
+                      //   this.props.navigation.navigate(
+                      //     'CategoryCasedetails',
+                      //     {categoryCase: item},
+                      //   );
+                      // }}
+                      // >
+                      //   {/* Case Image  */}
+                      //   <Image
+                      //     source={item.case_image}
+                      //     style={styles.caseImgContainer}
+                      //     resizeMode="center"
+                      //   />
+
+                      //   {/* Case Name */}
+                      //   <View style={styles.caseNameContainer}>
+                      //     <Text style={styles.caseNameStyle}>
+                      //       {item.case_name}
+                      //     </Text>
+                      //   </View>
+
+                      //   {/* Delete Case Icon  */}
+                      //   <TouchableOpacity
+                      //     onPress={() => {
+                      //       this.DeleteCase(index);
+                      //     }}
+                      //     style={styles.deleteIconStyle}>
+                      //     <FontAwesome5
+                      //       name="trash"
+                      //       size={23}
+                      //       style={styles.deleteIconStyle}
+                      //     />
+                      //   </TouchableOpacity>
+                      // </TouchableOpacity>
+
+                      <View
                         key={index}
-                        style={styles.containerOfEachCase}
-                        onPress={() => {
-                          this.props.navigation.navigate(
-                            'CategoryCasedetails',
-                            {categoryCase: item},
-                          );
+                        style={{
+                          backgroundColor: '#ffffff',
+                          marginVertical: 10,
+                          borderRadius: 15,
+                          width: '95%',
+                          alignSelf: 'center',
+                          elevation: 2,
                         }}>
-                        {/* Case Image  */}
-                        <Image
-                          source={item.case_img}
-                          style={styles.caseImgContainer}
-                          resizeMode="center"
-                        />
+                        <View
+                          style={{
+                            height: height * 0.13,
+                            width: '100%',
+                            flexDirection: 'row',
+                          }}>
+                          <TouchableOpacity
+                            style={{
+                              height: height * 0.13,
+                              width: '80%',
+                              flexDirection: 'row',
+                            }}
+                            key={index}
+                            onPress={() => {
+                              this.props.navigation.navigate(
+                                'CategoryCasedetails',
+                                {categoryCase: item},
+                              );
+                            }}>
+                            <Image
+                              source={item.case_image}
+                              style={{
+                                width: '28%',
+                                height: '75%',
+                                // borderRadius: 15,
+                                alignSelf: 'center',
+                                // borderWidth: 0.5,
+                                borderColor: '#B9C9CE',
+                                marginLeft: '4%',
+                              }}
+                              resizeMode="center"
+                            />
+                            <View
+                              style={{
+                                alignSelf: 'center',
+                                marginLeft: '5%',
+                                width: '50%',
+                                // backgroundColor: '#000',
+                              }}>
+                              <Text
+                                style={{
+                                  fontSize: 20,
+                                  fontWeight: '500',
+                                  color: '#000',
+                                  textAlign: 'left',
+                                }}>
+                                {item.case_name}
+                              </Text>
 
-                        {/* Case Name */}
-                        <View style={styles.caseNameContainer}>
-                          <Text style={styles.caseNameStyle}>
-                            {item.case_name}
-                          </Text>
+                              <Text
+                                style={{
+                                  fontSize: 20,
+                                  fontWeight: '500',
+                                  color: '#000',
+                                  textAlign: 'left',
+                                }}>
+                                {item.case_name}
+                              </Text>
+                            </View>
+                          </TouchableOpacity>
+                          <TouchableOpacity
+                            onPress={() => {
+                              this.DeleteCase(index);
+                            }}
+                            style={{
+                              // backgroundColor: '#00f',
+                              width: '20%',
+                              // height: '100%',
+                              // alignSelf: 'center',
+                              justifyContent: 'center',
+                            }}>
+                            <Icon
+                              name="trash"
+                              size={24}
+                              style={{
+                                color: '#D9D9D9',
+                                alignSelf: 'center',
+                                marginLeft: '3%',
+                              }}
+                            />
+                          </TouchableOpacity>
                         </View>
-
-                        {/* Delete Case Icon  */}
-                        <TouchableOpacity
-                          onPress={() => {
-                            this.DeleteCase(index);
-                          }}
-                          style={styles.deleteIconStyle}>
-                          <FontAwesome5
-                            name="trash"
-                            size={23}
-                            style={styles.deleteIconStyle}
-                          />
-                        </TouchableOpacity>
-                      </TouchableOpacity>
+                      </View>
                     ),
                   )}
                 </View>
