@@ -76,3 +76,21 @@ npm i @react-native-async-storage/async-storage
 ```
 npm i @react-native-community/netinfo
 ```
+<br>
+<p>8. Image-picker:A React Native module that allows you to select a photo/video from the device library or camera.</p>
+
+```
+npm i react-native-image-picker
+```
+<br>
+<p>9. Textinput Effects</p>
+
+```
+npm i react-native-textinput-effects
+```
+<br>
+<p>10. Vector Icons</p>
+
+```
+npm i react-native-vector-icons
+```
