@@ -6,7 +6,7 @@
   
 <h2>🧐 About The Project:</h2>
 <br>
-In This GiveYu Mobile App we will allow users to :
+In This GiveYu Mobile App we will allow Users to :
 
 *   Sign-up using (name, phone number and email ),
 *   Log-in using ( email and password ).
@@ -18,7 +18,7 @@ In This GiveYu Mobile App we will allow users to :
 *   Donate by delegator if offline and by Visa / Master card or Electronic wallets if online.
 *   Can also select any charity and donate by message of 5 L.E.
 <br>
-In This GiveYu Mobile App we will allow charities to :
+In This GiveYu Mobile App we will allow Charities to :
 
 *   Sign-up using (name, phone number, email address, facebook & instagram links and identification number).
 *   Log-in using ( email and password ).
@@ -26,7 +26,10 @@ In This GiveYu Mobile App we will allow charities to :
 *   Modify profile data (Adding Electronic wallets numbers ).
 *   Add categories exist in the charity .
 *   Add cases that are in these categories.
+<br>
+In This GiveYu Mobile App we will allow Admin to :
 
+*   Admin control Charities entries to the application by checking the charity details and their identification number (Add or Remove charities ).
 
 
 <h2>💻 Built with</h2>
