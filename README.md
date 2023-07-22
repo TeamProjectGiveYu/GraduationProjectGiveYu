@@ -58,8 +58,21 @@ npm install @react-navigation/native
 npm install react-native-screens react-native-safe-area-context
 ```
 <br>
-<p>5. AsyncStorage: An asynchronous unencrypted persistent key-value storage system for React Native.</p>
+
+<p>5. Native Stack Navigator: provides a way for your app to transition between screens where each new screen is placed on top of a stack.</p>
+
+```
+npm install @react-navigation/native-stack
+```
+<br>
+<p>6. AsyncStorage: An asynchronous unencrypted persistent key-value storage system for React Native.</p>
 
 ```
 npm i @react-native-async-storage/async-storage
+```
+<br>
+<p>7. React Native Network Info: API for Android iOS macOS Windows &amp; Web. It allows you to get information on (Connection type,  Connection quality).</p>
+
+```
+npm i @react-native-community/netinfo
 ```
