@@ -36,3 +36,30 @@ In This GiveYu Mobile App we will allow charities to :
 *   Javascript
 *   PHP
 *   MySQL
+
+
+<h2>🛠️ Installation Steps:</h2>
+
+<p>1. React Native</p>
+
+<p>2. Javascript</p>
+
+
+
+<p>3. React navigation package :</p>
+
+```
+npm install @react-navigation/native
+```
+<br>
+<p>4. Installing dependencies into a bare React Native project:</p>
+
+```
+npm install react-native-screens react-native-safe-area-context
+```
+<br>
+<p>5. AsyncStorage: An asynchronous unencrypted persistent key-value storage system for React Native.</p>
+
+```
+npm i @react-native-async-storage/async-storage
+```
