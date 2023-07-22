@@ -26,3 +26,13 @@ In This GiveYu Mobile App we will allow charities to :
 *   Modify profile data (Adding Electronic wallets numbers ).
 *   Add categories exist in the charity .
 *   Add cases that are in these categories.
+
+
+
+<h2>💻 Built with</h2>
+
+
+*   React native
+*   Javascript
+*   PHP
+*   MySQL
