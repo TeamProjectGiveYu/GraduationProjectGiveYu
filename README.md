@@ -4,7 +4,7 @@
 
   
   
-<h2>🧐 About The Project</h2>
+<h2>🧐 About The Project:</h2>
 <br>
 In This GiveYu Mobile App we will allow users to :
 
